@@ -1,0 +1,7 @@
+a[href="mailto:info.vribbe@gmail.com"],
+a[href="mailto:info.vribbe@gmail.com"]:visited,
+a[href="mailto:info.vribbe@gmail.com"]:hover {
+  color: #fff;
+}
+.logo { color: inherit; text-decoration: none; }
+.form-status { flex-basis: 100%; color: #aaa; font-size: 13px; margin-top: 16px; }
