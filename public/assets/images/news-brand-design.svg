@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs><radialGradient id="bg"><stop stop-color="#343840"/><stop offset="1" stop-color="#111315"/></radialGradient><linearGradient id="silver" x2="1" y2="1"><stop stop-color="#f5f5f2"/><stop offset=".5" stop-color="#b8bec8"/><stop offset="1" stop-color="#727985"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="#151719"/>
+<rect x="40" y="40" width="1520" height="920" rx="24" fill="url(#bg)" stroke="#42464c"/>
+<g fill="none" stroke="#ffffff" opacity=".045"><path d="M800 40v920M1000 40v920M1200 40v920M1400 40v920M40 240h1520M40 440h1520M40 640h1520M40 840h1520"/></g>
+<g font-family="Arial, Helvetica, sans-serif"><text x="100" y="125" fill="#f5f5f2" font-size="32" font-weight="700" letter-spacing="5">VRIBBE?</text><text x="1500" y="122" fill="#afb5be" font-size="18" letter-spacing="3" text-anchor="end">STUDIO JOURNAL / 01</text>
+<path d="M100 163h1400" stroke="#555a62"/>
+<text x="100" y="305" fill="#afb5be" font-size="19" letter-spacing="4">VISUAL IDENTITY</text>
+<text x="91" y="448" fill="#f5f5f2" font-size="136" font-weight="700" letter-spacing="-8">Brand</text><text x="91" y="584" fill="url(#silver)" font-size="136" font-weight="700" letter-spacing="-8">by design.</text>
+<circle cx="1235" cy="387" r="218" fill="none" stroke="#5d646e"/><circle cx="1235" cy="387" r="186" fill="none" stroke="#353b43"/><svg x="1060" y="225" width="350" height="302" viewBox="0 0 604 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_di_2_64)">
+<path d="M453.505 10.6062L345.588 124.606C334.119 136.72 344.112 154.888 362.243 154.888H578.456C596.604 154.888 606.591 136.69 595.088 124.581L486.792 10.5816C478.179 1.51538 462.099 1.52727 453.505 10.6062Z" fill="url(#paint0_linear_2_64)"/>
+<path d="M168.434 6.88201C224.064 70.5547 255.253 106.253 310.884 169.926C366.514 233.599 397.703 269.297 453.334 332.97C459.239 339.729 459.31 349.387 453.505 356.221C404.173 414.291 376.515 446.849 327.183 504.919C319.237 514.273 304.006 514.376 295.914 505.131C183.668 376.889 120.735 304.989 8.48863 176.747C2.49104 169.894 2.50525 160.07 8.52265 153.233C58.8405 96.0591 87.0516 64.0041 137.369 6.83046C145.403 -2.29784 160.435 -2.2729 168.434 6.88201Z" fill="url(#paint1_linear_2_64)"/>
+<path d="M137.745 7.16113C145.579 -1.74052 160.258 -1.71637 168.058 7.21094C223.688 70.8834 254.877 106.582 310.507 170.255C366.137 233.927 397.327 269.626 452.957 333.299C458.699 339.871 458.768 349.252 453.124 355.896C403.792 413.967 376.134 446.525 326.803 504.596C319.055 513.716 304.181 513.817 296.29 504.802L8.86523 176.417C3.03304 169.754 3.04686 160.212 8.89844 153.563L137.745 7.16113ZM453.868 10.9502C462.266 2.07946 478.014 2.06726 486.43 10.9258L594.726 124.926C600.32 130.815 600.681 138.154 597.453 144.035C594.219 149.929 587.359 154.389 578.456 154.389H362.243C353.349 154.389 346.492 149.936 343.254 144.049C340.023 138.174 340.374 130.841 345.951 124.949L453.868 10.9502Z" stroke="white"/>
+<path d="M137.745 7.16113C145.579 -1.74052 160.258 -1.71637 168.058 7.21094C223.688 70.8834 254.877 106.582 310.507 170.255C366.137 233.927 397.327 269.626 452.957 333.299C458.699 339.871 458.768 349.252 453.124 355.896C403.792 413.967 376.134 446.525 326.803 504.596C319.055 513.716 304.181 513.817 296.29 504.802L8.86523 176.417C3.03304 169.754 3.04686 160.212 8.89844 153.563L137.745 7.16113ZM453.868 10.9502C462.266 2.07946 478.014 2.06726 486.43 10.9258L594.726 124.926C600.32 130.815 600.681 138.154 597.453 144.035C594.219 149.929 587.359 154.389 578.456 154.389H362.243C353.349 154.389 346.492 149.936 343.254 144.049C340.023 138.174 340.374 130.841 345.951 124.949L453.868 10.9502Z" stroke="url(#paint2_linear_2_64)" stroke-opacity="0.2"/>
+</g>
+<defs>
+<filter id="filter0_di_2_64" x="0" y="0" width="604" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_64"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_64" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_2_64"/>
+</filter>
+<linearGradient id="paint0_linear_2_64" x1="4" y1="418.253" x2="576.699" y2="56.8252" gradientUnits="userSpaceOnUse">
+<stop offset="0.204775" stop-color="white"/>
+<stop offset="0.872071" stop-color="#EFEDED"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2_64" x1="4" y1="418.253" x2="576.699" y2="56.8252" gradientUnits="userSpaceOnUse">
+<stop offset="0.204775" stop-color="white"/>
+<stop offset="0.872071" stop-color="#EFEDED"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2_64" x1="302" y1="0" x2="302" y2="512" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#666666"/>
+</linearGradient>
+</defs>
+</svg>
+
+<rect x="100" y="700" width="850" height="196" rx="16" fill="#202327" stroke="#484e56"/>
+<text x="130" y="742" fill="#b7bbc3" font-size="16" letter-spacing="2">COLOUR SYSTEM</text>
+<rect x="130" y="767" width="180" height="65" rx="6" fill="#151719" stroke="#575c64"/><rect x="330" y="767" width="180" height="65" rx="6" fill="#808080"/><rect x="530" y="767" width="180" height="65" rx="6" fill="#d6d9e0"/><rect x="730" y="767" width="190" height="65" rx="6" fill="#f5f5f2"/>
+<g fill="#b7bbc3" font-size="15" letter-spacing="1"><text x="130" y="867">CHARCOAL</text><text x="330" y="867">GRAPHITE</text><text x="530" y="867">SILVER</text><text x="730" y="867">OFF WHITE</text></g>
+<rect x="980" y="700" width="520" height="196" rx="16" fill="#d6d9e0"/><text x="1014" y="742" fill="#41464e" font-size="16" letter-spacing="2">TYPOGRAPHY</text><text x="1008" y="856" fill="#151719" font-size="103" font-weight="700" letter-spacing="-7">Aa</text><text x="1190" y="809" fill="#292e34" font-size="22">Clarity. Character.</text><text x="1190" y="844" fill="#292e34" font-size="22">Consistency.</text></g></svg>

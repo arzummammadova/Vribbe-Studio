@@ -223,7 +223,7 @@ export default function Page() {
 <div className="article-cards">
 <a className="article-card" href="/news/brand-design">
 <figure>
-<img src="/assets/images/news-design.jpg" alt={t.articleImageAlt} loading="lazy" />
+<img src="/assets/images/news-brand-design.svg" alt={t.articleImageAlt} width="1600" height="1000" loading="lazy" />
 </figure>
 <h4>{t.articleTitle}</h4>
 <p>{t.designTrends}<span>{" / "}{t.articleMeta}</span>

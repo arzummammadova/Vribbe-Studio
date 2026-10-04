@@ -19,7 +19,7 @@ export default function NewsArticle({ slug }) {
           <p className="section-eyebrow">{design ? t.designTrends : t.experience} / {t.articleMeta}</p>
           <h1>{design ? t.articleTitle : t.articleTitleTwo}</h1>
         </header>
-        <img className="journal-cover" src={`/assets/images/news-${design ? 'design' : 'strategy'}.jpg`} alt={design ? t.articleImageAlt : t.articleImageAltTwo} width="1600" height="1000" />
+        <img className={`journal-cover${design ? ' journal-cover--brand' : ''}`} src={design ? '/assets/images/news-brand-design.svg' : '/assets/images/news-strategy.jpg'} alt={design ? t.articleImageAlt : t.articleImageAltTwo} width="1600" height="1000" />
         <div className="journal-body">
           {sections.map(([heading, text]) => <section key={heading}><h2>{heading}</h2><p>{text}</p></section>)}
           <a className="studio-link" href="/contact">{t.startProject} ↗</a>
