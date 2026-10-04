@@ -1,4 +1,6 @@
 'use client';
+import ServiceCards from "../components/ServiceCards";
+import StudioHeading from "../components/StudioHeading";
 import SiteHeader from "../components/SiteHeader";
 import { useLanguage } from "../lib/i18n";
 import './creative-studio.css';
@@ -22,10 +24,7 @@ export default function Page() {
 <div className="container hero-content-wrapper">
 <div className="hero-content hero-left">
 <h1>{t.heroTitle}<span>{t.heroTitleSpan}</span></h1>
-<button id="play-button" className="play-button hover-this">
-<a href="/contact">{t.startYourProject}</a>
-<i className="bi bi-arrow-up-right"></i>
-</button>
+<a id="play-button" className="play-button hover-this" href="/contact">{t.startYourProject}<i className="bi bi-arrow-up-right"></i></a>
 <div className="hero-description">
 <p>{t.heroDesc}</p>
 </div>
@@ -45,22 +44,22 @@ export default function Page() {
 <main>
 <section className="creative-studio" aria-label="VRIBBE Digital Studio">
   <div className="creative-studio__top">
-    <h2 className="creative-studio__word">VRIBBE</h2>
+    <StudioHeading>VRIBBE</StudioHeading>
     <p className="creative-studio__description">{t.creativeStudioDesc}</p>
   </div>
   <div className="creative-studio__middle">
     <div className="creative-studio__waves">
-      <img src="/assets/images/studio-waves.jpg" alt="" width="3000" height="2000" loading="lazy" />
+      <img src="/assets/images/studio-digital-waves.jpg" alt="" width="1600" height="900" loading="lazy" />
       <a className="creative-studio__play" href="https://www.youtube.com/@vribbe" target="_blank" rel="noopener noreferrer" aria-label="Visit VRIBBE Studio on YouTube">
         <svg width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true"><path d="M4 3.5C4 1.6 6.1.5 7.7 1.5L22 11.9c1.4 1 1.4 3.2 0 4.2L7.7 26.5C6.1 27.5 4 26.4 4 24.5V3.5Z" fill="currentColor" /></svg>
       </a>
     </div>
-    <h2 className="creative-studio__word creative-studio__word--green">DIGITAL</h2>
+    <StudioHeading green>DIGITAL</StudioHeading>
   </div>
   <div className="creative-studio__bottom">
-    <h2 className="creative-studio__word">STUDIO</h2>
+    <StudioHeading>STUDIO</StudioHeading>
     <div className="creative-studio__team">
-      <img src="/assets/images/studio-team.jpg" alt="Two colleagues discussing a creative project in the studio" width="1664" height="1109" loading="lazy" />
+      <img src="/assets/images/studio-collaboration.jpg" alt="Creative team collaborating on a digital project" width="1600" height="900" loading="lazy" />
     </div>
   </div>
 </section>
@@ -74,61 +73,15 @@ export default function Page() {
 </ul>
 </div>
 <div className="right">
-<h4>{t.servicesSubtitle}<span>{t.servicesSubtitleSpan}</span></h4>
-<button className="hover-this play-button service-button">
-<a href="/#ourservices">{t.learnMore}</a>
-<i className="bi bi-chevron-right"></i>
-</button>
+<StudioHeading as="h4" className="services-heading">{t.servicesSubtitle}<span>{t.servicesSubtitleSpan}</span></StudioHeading>
+<a className="hover-this play-button service-button" href="/contact">{t.startProject}<i className="bi bi-chevron-right"></i></a>
 </div>
 </div>
-<div className="ourservices-cards">
-<div className="ourservices-card">
-<div className="ourservices-card-header">
-<h3>{t.service1Title}</h3>
-<i className="bi bi-bezier"></i>
-</div>
-<div className="ourservices-card-description">
-<p>{t.service1Desc}</p>
-<div className="ourservices-card-img">
-<figure>
-<img src="/assets/images/card1.png" alt="" />
-</figure>
-</div>
-</div>
-</div>
-<div className="ourservices-card">
-<div className="ourservices-card-header">
-<h3>{t.service2Title}</h3>
-<i className="bi bi-code-slash"></i>
-</div>
-<div className="ourservices-card-description">
-<p>{t.service2Desc}</p>
-<div className="ourservices-card-img">
-<figure>
-<img src="/assets/images/card2.png" alt="" />
-</figure>
-</div>
-</div>
-</div>
-<div className="ourservices-card">
-<div className="ourservices-card-header">
-<h3>{t.service3Title}</h3>
-<i className="bi bi-code-slash"></i>
-</div>
-<div className="ourservices-card-description">
-<p>{t.service3Desc}</p>
-<div className="ourservices-card-img">
-<figure>
-<img src="/assets/images/card3.png" alt="" />
-</figure>
-</div>
-</div>
-</div>
-</div>
+<ServiceCards t={t} />
 <div className="ourphilosopy" id="studio">
 <div className="left">
 <figure>
-<img src="/assets/images/intro.png" alt="" />
+<img src="/assets/images/intro.png" alt="" loading="lazy" />
 </figure>
 </div>
 <div className="right">
@@ -137,25 +90,14 @@ export default function Page() {
 </ul>
 <h4>{t.philosophyText}<span>{t.philosophySpan}</span>
 </h4>
-<button className="hover-this play-button service-button philosophy-button">
-<a href="/#ourservices">{t.aboutVribbe}
+<a className="hover-this play-button service-button philosophy-button" href="/team">{t.aboutVribbe}
 <i className="bi bi-arrow-up-right"></i>
 </a>
-</button>
 </div>
 </div>
 <div className="ticker-wrap">
 <div className="ticker">
-<ul>
-<li>{"AI-Driven Solutions"}</li>
-<li>{"Flexible Price"}</li>
-<li>{"User Centric"}</li>
-<li>{"User Centric Design"}</li>
-<li>{"AI-Driven Solutions"}</li>
-<li>{"Flexible Price"}</li>
-<li>{"User Centric"}</li>
-<li>{"User Centric Design"}</li>
-</ul>
+<ul>{[...t.ticker, ...t.ticker].map((text, i) => <li key={i} aria-hidden={i >= t.ticker.length ? true : undefined}>{text}</li>)}</ul>
 </div>
 </div>
 </div>
@@ -255,115 +197,16 @@ export default function Page() {
 </div>
 </div>
 </section>
-<section id="our-clients">
+<section id="faq" className="awards-faq">
 <div className="container">
-<div className="our-clients">
-<ul>
-<li>{t.ourClients}</li>
-</ul>
-<div className="brands">
-<div className="brand"><figure><img src="/assets/images/brand1.svg" alt="" /></figure></div>
-<div className="brand"><figure><img src="/assets/images/brand2.svg" alt="" /></figure></div>
-<div className="brand"><figure><img src="/assets/images/brand3.svg" alt="" /></figure></div>
-<div className="brand"><figure><img src="/assets/images/brand4.svg" alt="" /></figure></div>
-<div className="brand"><figure><img src="/assets/images/brand5.svg" alt="" /></figure></div>
-<div className="brand"><figure><img src="/assets/images/brand5.svg" alt="" /></figure></div>
-</div>
-</div>
-</div>
-</section>
-<section id="testimonials">
-<div className="featured container">
-<div className="featured-left">
-<ul>
-<li>{t.testimonials}</li>
-</ul>
-</div>
-<div className="featured-right">
-<h4>{t.testimonialsSubtitle}<span>{t.testimonialsSubtitleSpan}</span>
-</h4>
-<button className="testimonials-button">
-<div className="left">
-<img src="/assets/images/logotestimonails.svg" alt="" />
-</div>
-<div className="right">
-<div className="top">
-<p className="rating">{"4.9/5"}</p>
-<i className="fa-star"></i>
-</div>
-<div className="rating-desc">
-<p>{t.basedOn}</p>
-</div>
-</div>
-</button>
-</div>
-</div>
-<div className="testimonials-carousel">
-<div className="carousel-container container">
-<div className="carousel-track">
-{[
-  { img: '/assets/images/avatar1.jpg', name: 'Bradley Gordon', role: 'CEO & Founder, Archin Studio' },
-  { img: '/assets/images/avatar2.jpg', name: 'Bradley Gordon', role: 'CEO & Founder, Archin Studio' },
-  { img: '/assets/images/avatar3.jpg', name: 'Bradley Gordon', role: 'CEO & Founder, Archin Studio' },
-  { img: '/assets/images/avatar1.jpg', name: 'Bradley Gordon', role: 'CEO & Founder, Archin Studio' },
-].map((item, i) => (
-  <div className="testimonials-card" key={i}>
-  <div className="rating">
-  <div className="rating-top">
-  <div className="rating-value">{"5.0"}</div>
-  <div className="stars">{"★★★★★"}</div>
-  </div>
-  <div className="text">
-  <h6>{t.testimonialText}</h6>
-  </div>
-  </div>
-  <div className="user-info">
-  <div className="left"><img src={item.img} alt="" /></div>
-  <div className="right">
-  <h6>{item.name}</h6>
-  <p>{item.role}</p>
-  </div>
-  </div>
-  </div>
-))}
-</div>
-</div>
-</div>
-</section>
-<section id="award ">
-<div className="container">
-<div className="award container">
-<div className="featured-left">
-<ul>
-<li>{t.awardsTitle}</li>
-</ul>
-</div>
-<div className="featured-right">
-<h4>{t.awardsSubtitle}<span>{t.awardsSubtitleSpan}</span>
-</h4>
-</div>
-</div>
-<table className="award-table">
-<tr>
-<th>{t.hosted}</th>
-<th>{t.awardTitle}</th>
-<th>{t.date}</th>
-</tr>
-<tbody>
-<tr><td>{"Awwwards"}</td><td>{"SOTY 2023 - 1st Winner"}</td><td>{"May 2023"}</td></tr>
-<tr><td>{"css awards"}</td><td>{"Top 5 Best of eCommerce Websites 2022"}</td><td>{"Dec 2022"}</td></tr>
-<tr><td>{"Awwwards"}</td><td>{"Honor SOTD November, 2022"}</td><td>{"Nov 2022"}</td></tr>
-<tr><td>{"Behance Portfolio"}</td><td>{"Winner – US Behance Portfolio Review 2021"}</td><td>{"Aug 2021"}</td></tr>
-<tr><td>{"ui/ux global award"}</td><td>{"Top 10 Best of Mobile App Design 2021"}</td><td>{"Mar 2021"}</td></tr>
-<tr><td>{"fwa us award"}</td><td>{"Winner – Best of Architecture Website 2020"}</td><td>{"Sep 2020"}</td></tr>
-</tbody>
-</table>
-<button className="table-button hover-this play-button">
-<a href="/#ourservices">{t.showMore}</a>
-<i className="bi bi-chevron-right"></i>
-</button>
-</div>
-</section>
+<div className="award container"><div className="featured-left"><ul><li>{t.faqTitle}</li></ul></div>
+<div className="featured-right"><h4>{t.faqSubtitle}<span>{t.faqSubtitleSpan}</span></h4></div></div>
+<div className="awards-faq__list">
+{t.faqs.map(([question, answer], index) => <details name="studio-faq" key={question}>
+<summary><span className="awards-faq__number">0{index + 1}</span><span>{question}</span><span className="awards-faq__toggle" aria-hidden="true" /></summary>
+<p className="faq-answer">{answer}</p>
+</details>)}
+</div></div></section>
 <section id="articles">
 <div className="container">
 <div className="award container">
@@ -378,22 +221,22 @@ export default function Page() {
 </div>
 </div>
 <div className="article-cards">
-<div className="article-card">
+<a className="article-card" href="/news/brand-design">
 <figure>
-<img src="/assets/images/articlecard.jpg" alt="" />
+<img src="/assets/images/news-design.jpg" alt={t.articleImageAlt} loading="lazy" />
 </figure>
 <h4>{t.articleTitle}</h4>
-<p>{t.designTrends}<span>{" / May 15, 2024 "}</span>
+<p>{t.designTrends}<span>{" / "}{t.articleMeta}</span>
 </p>
-</div>
-<div className="article-card">
+</a>
+<a className="article-card" href="/news/product-roadmap">
 <figure>
-<img src="/assets/images/articlecard2.jpg" alt="" />
+<img src="/assets/images/news-strategy.jpg" alt={t.articleImageAltTwo} loading="lazy" />
 </figure>
-<h4>{t.articleTitle}</h4>
-<p>{t.experience}<span>{" / May 15, 2024 "}</span>
+<h4>{t.articleTitleTwo}</h4>
+<p>{t.experience}<span>{" / "}{t.articleMeta}</span>
 </p>
-</div>
+</a>
 </div>
 </div>
 </section>
@@ -404,12 +247,10 @@ export default function Page() {
 <h3>{t.contactTitle}<span>{t.contactSpan}</span>
 </h3>
 <div className="bottom">
-<p>{"+068 5681 96 96"}</p>
+<p><a href="mailto:info.vribbe@gmail.com">info.vribbe@gmail.com</a></p>
 <span>{t.callUs}</span>
-<button className="hover-this play-button service-button philosophy-button">
-<a href="/#ourservices">{t.aboutVribbe}<i className="bi bi-arrow-up-right"></i>
+<a className="hover-this play-button service-button philosophy-button" href="/team">{t.aboutVribbe}<i className="bi bi-arrow-up-right"></i>
 </a>
-</button>
 </div>
 </div>
 <div className="right">

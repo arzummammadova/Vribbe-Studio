@@ -10,6 +10,8 @@ export default function LanguageProvider({ children }) {
     if (saved && translations[saved]) setLangState(saved);
   }, []);
 
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
+
   function setLang(newLang) {
     setLangState(newLang);
     localStorage.setItem('vribbe_lang', newLang);

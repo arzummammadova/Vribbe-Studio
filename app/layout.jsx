@@ -3,7 +3,7 @@ import LanguageProvider from '../components/LanguageProvider';
 
 export const metadata = {
   title: 'VRIBBE Studio',
-  description: 'Website and mobile app development, UI/UX design, branding, logos, SEO and technical solutions by VRIBBE Studio.',
+  description: 'Website and mobile app development, UI/UX design, branding, SEO, AI chatbots, automation and data analytics by VRIBBE Studio.',
 };
 
 export default function RootLayout({ children }) {
@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
         <link rel="stylesheet" href="/assets/css/studio.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
       </head>
       <body>
         <LanguageProvider>

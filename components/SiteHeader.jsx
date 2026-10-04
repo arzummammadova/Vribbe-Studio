@@ -86,9 +86,7 @@ export default function SiteHeader() {
   </button>
 ))}
 </div>
-<button className="start-project hover-this">
-<a href="/contact">{t.startProject}<img src="/assets/icons/arrow-top-right (1).svg" alt="" /></a>
-</button>
+<a className="start-project hover-this" href="/contact">{t.startProject}<img src="/assets/icons/arrow-top-right (1).svg" alt="" /></a>
 <div className="menu hover-this">
 <i className="fa-solid fa-align-right"></i>
 </div>

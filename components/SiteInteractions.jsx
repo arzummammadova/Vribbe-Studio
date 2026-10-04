@@ -7,6 +7,23 @@ export default function SiteInteractions() {
   const pathname = usePathname();
   useEffect(() => {
     const controller = new AbortController();
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const cards = document.querySelectorAll('.ourservices-card, .featured-card, .article-card');
+    const sizes = new ResizeObserver(entries => {
+      entries.forEach(({ target }) => target.style.setProperty('--card-height', `${target.offsetHeight}px`));
+    });
+    cards.forEach(card => sizes.observe(card));
+    const reveal = new IntersectionObserver(entries => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        if (!motion.matches) target.animate([
+          { opacity: .35, transform: 'translateY(20px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 650, easing: 'cubic-bezier(.22,1,.36,1)' });
+        reveal.unobserve(target);
+      });
+    }, { threshold: .15 });
+    document.querySelectorAll('.hero-left, .hero-right, .ourservices-header, .featured, .award, .journal-heading, .journal-body section').forEach(el => reveal.observe(el));
     const on = (el, event, fn) => el?.addEventListener(event, fn, { signal: controller.signal });
     const menu = document.querySelector('.full-menu');
     const opener = document.querySelector('.menu');
@@ -83,7 +100,7 @@ export default function SiteInteractions() {
       window.location.href = `mailto:info.vribbe@gmail.com?subject=${encodeURIComponent(data.get('subject') || 'New project for VRIBBE Studio')}&body=${encodeURIComponent(body)}`;
       form.querySelector('.form-status').textContent = 'Continue in your email app to send your enquiry to info.vribbe@gmail.com.';
     }));
-    return () => { controller.abort(); clearInterval(timer); document.body.style.overflow = ''; };
+    return () => { controller.abort(); sizes.disconnect(); reveal.disconnect(); clearInterval(timer); document.body.style.overflow = ''; };
   }, [pathname]);
   return null;
 }

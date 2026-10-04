@@ -1,6 +1,7 @@
+'use client';
+import { useLanguage } from '../../lib/i18n';
 import SiteHeader from "../../components/SiteHeader";
-export const metadata = {"title": "VRIBBE Studio | Our Work"};
-export default function Page() { return <>
+export default function Page() { const { t } = useLanguage(); return <>
 <link rel="stylesheet" href="/assets/css/work.css" />
 <header>
 <div id="topBtn" className="hover-this up-button">
@@ -14,11 +15,11 @@ export default function Page() { return <>
 </header>
 <main>
 <div id="hero" className="hero-work">
-<h1>{"Our Work"}</h1>
+<h1>{t.works}</h1>
 <div className="router">
-<div className=""><a href="/">{"Home"}</a></div>
+<div className=""><a href="/">{t.home}</a></div>
 <i className="fa-solid fa-arrow-right-long"></i>
-<div className="green"><a href="/work">{"Portfolio"}</a></div>
+<div className="green"><a href="/work">{t.works}</a></div>
 </div>
 </div>
 <div className="work-card-section">
@@ -69,12 +70,12 @@ export default function Page() { return <>
 <footer id="footer-work">
 <div className="work-call-action">
 <div className="work-call-action-text">
-<a href="/contact">{"Let’s make something great! "}</a>
+<a href="/contact">{t.contactSpan}</a>
 </div>
 <div className="contact-button">
 <div className="contact-btn">
 <div className="contact-btn-link">
-<a href="/contact" className="">{"Contact Us  "}<img src="/assets/icons/arrow-top-right (1).svg" alt="" />
+<a href="/contact" className="">{t.contactUs}<img src="/assets/icons/arrow-top-right (1).svg" alt="" />
 </a>
 </div>
 </div>
@@ -100,7 +101,7 @@ export default function Page() { return <>
 </div>
 </div>
 <div className="information-right">
-<p>{"inquiry"}</p>
+<p>{t.inquiry}</p>
 <h4><a href="mailto:info.vribbe@gmail.com">{"info.vribbe@gmail.com"}</a></h4>
 
 </div>
@@ -111,20 +112,20 @@ export default function Page() { return <>
 <div className="copyright-work">
 <div className="container">
 <div className="copyright">
-<div className="left">{"\n        © 2026 "}<a href="/">{" VRIBBE. "}</a>{"All Right Reserved\n      "}</div>
+<div className="left">{t.copyright}<a href="/">{" VRIBBE. "}</a>{t.allRightsReserved}</div>
 <div className="right">
 <ul>
 <li className="hover-this">
-<a href="/" className="active">{"Home"}</a>
+<a href="/" className="active">{t.home}</a>
 </li>
 <li className="hover-this">
-<a href="/work">{"Works"}</a>
+<a href="/work">{t.works}</a>
 </li>
 <li className="hover-this">
-<a href="/#ourservices">{"Studio"}</a>
+<a href="/#ourservices">{t.studio}</a>
 </li>
 <li className="hover-this">
-<a href="/#articles">{"News"}</a>
+<a href="/#articles">{t.news}</a>
 </li>
 </ul>
 </div>

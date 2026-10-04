@@ -1,6 +1,7 @@
+'use client';
+import { useLanguage } from '../../lib/i18n';
 import SiteHeader from "../../components/SiteHeader";
-export const metadata = {"title": "VRIBBE Studio | Contact"};
-export default function Page() { return <>
+export default function Page() { const { t } = useLanguage(); return <>
 <link rel="stylesheet" href="/assets/css/contact.css" />
 <header>
 <div id="topBtn" className="hover-this up-button">
@@ -16,7 +17,7 @@ export default function Page() { return <>
 <section className="contact-hero" id="hero">
 <div className="container">
 <div className="hero hero-contact">
-<h1>{"Get In Touch"}</h1>
+<h1>{t.contactUs}</h1>
 
 </div>
 </div>
@@ -26,15 +27,15 @@ export default function Page() { return <>
 <form data-contact-form="">
 <div className="form-left">
 <div className="form-left-top">
-<h3>{"LET'S MAKE YOUR BRAND "}<span>{"BRILLIANT!"}</span>
+<h3>{t.contactTitle}<span>{t.contactSpan}</span>
 </h3>
-<p>{"If you would like to work with us or just want to get in touch, we’d love to hear from\n                                you!"}</p>
+<p>{t.heroDesc}</p>
 </div>
 <div className="form-left-center">
 <div className="info">
 
 <div className="email">
-<h5>{"Email"}</h5>
+<h5>{t.emailAddress}</h5>
 <p><a href="mailto:info.vribbe@gmail.com">{"info.vribbe@gmail.com"}</a></p>
 </div>
 </div>
@@ -50,17 +51,17 @@ export default function Page() { return <>
 </div>
 <div className="form-right">
 <ul>
-<li>{"Send a message"}</li>
+<li>{t.sendMessage}</li>
 </ul>
 <div className="form-top">
-<input type="text" placeholder="Name" name="name" aria-label="Name" required />
-<input type="email" placeholder="Email" name="email" aria-label="Email" required />
+<input type="text" placeholder={t.yourFullName} name="name" aria-label={t.yourFullName} required />
+<input type="email" placeholder={t.yourEmail} name="email" aria-label={t.yourEmail} required />
 </div>
-<input type="text" placeholder="Subject" name="subject" aria-label="Subject" required />
-<textarea placeholder="Message" name="message" aria-label="Message" required></textarea>
-<button className="send" type="submit">{"Let's Talking "}<img src="/assets/icons/arrow-top-right (1).svg" alt="" /></button>
+<input type="text" placeholder={t.subject} name="subject" aria-label={t.subject} required />
+<textarea placeholder={t.messagePlaceholder} name="message" aria-label={t.messagePlaceholder} required></textarea>
+<button className="send" type="submit">{t.sendMessage}<img src="/assets/icons/arrow-top-right (1).svg" alt="" /></button>
 </div>
-<p className="form-status" role="status">{"Submitting opens your email app with your project details."}</p></form>
+<p className="form-status" role="status">{t.formStatus}</p></form>
 </div>
 </section>
 </main>
@@ -84,7 +85,7 @@ export default function Page() { return <>
 </div>
 </div>
 <div className="information-right">
-<p>{"inquiry"}</p>
+<p>{t.inquiry}</p>
 <h4><a href="mailto:info.vribbe@gmail.com">{"info.vribbe@gmail.com"}</a></h4>
 
 </div>
@@ -95,20 +96,20 @@ export default function Page() { return <>
 <div className="copyright-contact">
 <div className="container">
 <div className="copyright">
-<div className="left">{"\n        © 2026 "}<a href="/">{" VRIBBE. "}</a>{"All Right Reserved\n      "}</div>
+<div className="left">{t.copyright}<a href="/">{" VRIBBE. "}</a>{t.allRightsReserved}</div>
 <div className="right">
 <ul>
 <li className="hover-this">
-<a href="/" className="active">{"Home"}</a>
+<a href="/" className="active">{t.home}</a>
 </li>
 <li className="hover-this">
-<a href="/work">{"Works"}</a>
+<a href="/work">{t.works}</a>
 </li>
 <li className="hover-this">
-<a href="/#ourservices">{"Studio"}</a>
+<a href="/#ourservices">{t.studio}</a>
 </li>
 <li className="hover-this">
-<a href="/#articles">{"News"}</a>
+<a href="/#articles">{t.news}</a>
 </li>
 </ul>
 </div>

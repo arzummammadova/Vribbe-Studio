@@ -28,6 +28,18 @@ export default function TeamPage() {
       instagram: "https://www.instagram.com/vribbe/",
       email: "info.vribbe@gmail.com",
     },
+    {
+      name: "Miriyeva Lamiye",
+      role: t.lamiyeRole,
+      bio: t.lamiyeBio,
+      initials: "ML",
+      avatarClass: "team-avatar--lamiye",
+      skills: ["Data Analytics", "Data Visualization", "Reporting"],
+      linkedin: "https://www.linkedin.com/company/vribbe",
+      instagram: "https://www.instagram.com/vribbe/",
+      email: "info.vribbe@gmail.com",
+    },
+
   ];
 
   return (
@@ -69,13 +81,13 @@ export default function TeamPage() {
           <div className="container">
             <div className="team-grid">
               {members.map((member) => (
-                <div key={member.name} className="team-card hover-this">
+                <div key={member.name} className="team-card">
                   <div className="team-card-header">
                     <div className="team-avatar-wrapper">
                       <div className={`team-avatar ${member.avatarClass}`}>
                         <span>{member.initials}</span>
                       </div>
-                      <span className="team-status-dot" title="Active"></span>
+                      
                     </div>
                     <div className="team-meta">
                       <h3>{member.name}</h3>
