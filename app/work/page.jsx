@@ -63,6 +63,16 @@ export default function Page() { const { t } = useLanguage(); return <>
 <h2>{"Unerio Residential"}</h2>
 </div>
 </div>
+<div className="work-card">
+<div className="buttons">
+<button>{"\n                Development\n              "}</button>
+<button>{"\n                UI/UX\n              "}</button>
+<button>{"\n                Ullustration\n              "}</button>
+</div>
+<div className="text">
+<h2>{"Vribbe"}</h2>
+</div>
+</div>
 </div>
 </div>
 </div>
