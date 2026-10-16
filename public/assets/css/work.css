@@ -89,6 +89,24 @@
     font-weight: 500;
     
   }
+  .work-card:nth-child(5){
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../images/testimonials5.jpg);
+    gap: 5rem;
+  }
+  .work-card:nth-child(5) .text h2{
+    text-align: start !important;
+    font-size: 80px;
+    margin-top: 14rem;
+    font-weight: 500;
+  }
+  .work-card:nth-child(5) {
+    position: sticky;
+    top: 140px; 
+    z-index: 6; 
+  }
   .work-card:first-child {
     position: sticky;
     top: -40px; 
@@ -250,7 +268,8 @@ letter-spacing: -3px;
   .work-card{
  height: 400px;
 }
-.work-card:nth-child(4) .text h2{
+.work-card:nth-child(4) .text h2,
+.work-card:nth-child(5) .text h2{
   font-size: 30px;
 }
 .work-call-action-text a{
@@ -292,5 +311,11 @@ letter-spacing: -3px;
     position: sticky;
     top: 80px; 
     z-index: 5; 
+  }
+
+  .work-card:nth-child(5) {
+    position: sticky;
+    top: 90px; 
+    z-index: 6; 
   }
 }

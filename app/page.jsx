@@ -1,5 +1,6 @@
 'use client';
 import ServiceCards from "../components/ServiceCards";
+import PhilosophyReveal from "../components/PhilosophyReveal";
 import StudioHeading from "../components/StudioHeading";
 import SiteHeader from "../components/SiteHeader";
 import { useLanguage } from "../lib/i18n";
@@ -78,23 +79,23 @@ export default function Page() {
 </div>
 </div>
 <ServiceCards t={t} />
-<div className="ourphilosopy" id="studio">
+<PhilosophyReveal className="ourphilosopy" id="studio">
 <div className="left">
-<figure>
+<figure data-reveal="image">
 <img src="/assets/images/intro.png" alt="" loading="lazy" />
 </figure>
 </div>
 <div className="right">
-<ul>
+<ul data-reveal="text">
 <li>{t.ourPhilosophy}</li>
 </ul>
-<h4>{t.philosophyText}<span>{t.philosophySpan}</span>
+<h4 data-reveal="text">{t.philosophyText}<span>{t.philosophySpan}</span>
 </h4>
-<a className="hover-this play-button service-button philosophy-button" href="/team">{t.aboutVribbe}
+<a data-reveal="text" className="hover-this play-button service-button philosophy-button" href="/team">{t.aboutVribbe}
 <i className="bi bi-arrow-up-right"></i>
 </a>
 </div>
-</div>
+</PhilosophyReveal>
 <div className="ticker-wrap">
 <div className="ticker">
 <ul>{[...t.ticker, ...t.ticker].map((text, i) => <li key={i} aria-hidden={i >= t.ticker.length ? true : undefined}>{text}</li>)}</ul>
@@ -185,6 +186,24 @@ export default function Page() {
 </div>
 <div className="featured-card-right">
 <img src="/assets/images/testimonials4.jpg" alt="" />
+</div>
+</div>
+<div className="featured-card">
+<div className="featured-card-left">
+<div className="top">
+<h3>{"Vribbe "}</h3>
+</div>
+<div className="bottom">
+<p>{t.vribbeProjectDesc}</p>
+<div className="buttons">
+<button>{"Development"}</button>
+<button>{"UI/UX"}</button>
+<button>{"Illustration"}</button>
+</div>
+</div>
+</div>
+<div className="featured-card-right">
+<img src="/assets/images/testimonials5.jpg" alt="" />
 </div>
 </div>
 </div>

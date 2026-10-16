@@ -967,6 +967,12 @@ color: var(--light-gray);
   z-index: 5; 
 }
 
+.featured-card:nth-child(5) {
+  position: sticky;
+  top: 140px; 
+  z-index: 6; 
+}
+
 .btn-works{
 
  display: flex;
